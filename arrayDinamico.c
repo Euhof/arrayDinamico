@@ -6,10 +6,10 @@ typedef struct {
     int *item;
     size_t capacidade;
     size_t contagem;
-}Numeros;
+}Elementos;
 
-// Array dinamico
-#define da_append(xs, x)\
+// Array dinamico como macro
+#define push_array(xs, x)\
     do {\
         if (xs.contagem >= xs.capacidade) {\
             if (xs.capacidade == 0) {\
@@ -23,14 +23,14 @@ typedef struct {
     }while(0)
  
 int main() {
-    Numeros xs = {0};
+    Elementos xs = {0}; //xs pode ser lido como "Diversos"
 
     for (int x = 0; x < 10; x++) {
-        da_append(xs,x); //uso do array dinamico
+        push_array(xs,x); //usando o array dinamico
     }
 
     for (size_t i = 0; i < xs.contagem; i++) {
-        printf("\n->%d", xs.item[i]);
+        printf("\n->%d", xs.item[i]); //items
     }
 
     return 0;
