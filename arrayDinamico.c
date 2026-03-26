@@ -6,7 +6,7 @@ typedef struct {
     int *item;
     size_t capacidade;
     size_t contagem;
-}Elementos;
+}Array;
 
 
 #define push_array(xs, x)                                                   \
@@ -24,7 +24,7 @@ typedef struct {
                                                                             
 
 int main() {
-    Elementos xs = {0};
+    Array xs = {0};
 
     for (int x = 0; x < 10; x++) {
         push_array(xs, x);
