@@ -34,5 +34,6 @@ int main() {
         printf("\n->%d", xs.item[i]);
     }
 
+    // free(xs.item);
     return 0;
 }
